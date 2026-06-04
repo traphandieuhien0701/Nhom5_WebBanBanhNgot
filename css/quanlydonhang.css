@@ -1,0 +1,189 @@
+
+.admin-qlhd{
+    display:flex;
+    background:#f7f0e4;
+}
+/* SIDEBAR */
+.sidebar{
+    width:300px;
+    background:#7B4E2D;
+    min-height:calc(100vh - 118px);
+}
+
+.sidebar-menu{
+    list-style:none;
+    padding-top:20px;
+}
+
+.sidebar-menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:18px 25px;
+
+    color:#fff;
+    text-decoration:none;
+}
+
+.sidebar-menu li.active a{
+    background:var(--medium-brown);
+}
+
+.sidebar-menu li a:hover{
+    background:var(--medium-brown);
+}
+/* Content */
+.main-content{
+    flex:1;
+    padding:30px;
+    background:#f4ecde;
+    min-height:100vh;
+}
+
+h1{
+    color:#8b5e24;
+    margin-bottom:30px;
+}
+
+/* ===== Thống kê ===== */
+.stats{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.card{
+    width:180px;
+    background:white;
+    border:1px solid #c9a77c;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+}
+
+.card .icon{
+    font-size:28px;
+    color:#8b5e24;
+}
+
+.card p{
+    margin:10px 0;
+    color:#8b5e24;
+}
+
+.card h2{
+    color:#6f4b1d;
+}
+
+/* ===== Filter ===== */
+.filter-box{
+    background:white;
+    border:1px solid #c9a77c;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.filter-row{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.filter-row:last-child{
+    margin-bottom:0;
+}
+
+.filter-row label{
+    width:80px;
+    color:#6f4b1d;
+    font-weight:bold;
+}
+
+.filter-row select,
+.filter-row input{
+    flex:1;
+    height:35px;
+    border:1px solid #b99163;
+    border-radius:20px;
+    padding:0 15px;
+}
+
+/* ===== Table ===== */
+.table-container{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #c9a77c;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#B97632;
+    color:white;
+}
+
+th{
+    padding:15px;
+    text-align:left;
+}
+
+td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+    color:#6f4b1d;
+}
+
+tbody tr:hover{
+    background:#faf7f1;
+}
+
+/* ===== Status ===== */
+.status{
+    padding:7px 14px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.waiting{
+    background:#f2eadb;
+    color:#8b5e24;
+}
+
+.shipping{
+    background:#b08b5c;
+    color:white;
+}
+
+.done{
+    background:#c6b36a;
+    color:white;
+}
+
+/* ===== Pagination ===== */
+.pagination{
+    display:flex;
+    justify-content:flex-end;
+    gap:8px;
+    margin-top:20px;
+}
+
+.pagination button{
+    width:32px;
+    height:32px;
+    border:1px solid #b8862b;
+    background:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.pagination .active{
+    background:#b8862b;
+    color:white;
+}

@@ -1,0 +1,331 @@
+/* =========================================================
+   FILE: tai-khoan.css
+   MỤC ĐÍCH:
+   - CSS riêng cho trang Tài khoản người dùng.
+   - Làm gọn phần main để hiển thị vừa màn hình hơn.
+   - Màu nền: #FDF5EC
+   - Màu chữ: #674831
+   ========================================================= */
+
+/* =========================
+   1. MAIN PAGE
+========================= */
+
+.account-page {
+  background-color: #fdf5ec;
+  color: #674831;
+  padding: 16px 0 28px;
+}
+
+.account-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* =========================
+   2. KHUNG CHÍNH
+========================= */
+
+.account-box {
+  border: 1px solid rgba(130, 90, 60, 0.18);
+  border-radius: 10px;
+
+  background-color: #fdeedf; 
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 150px 50px;
+  box-shadow: 0 4px 20px rgba(139, 90, 43, 0.05);
+}
+
+/* =========================
+   3. BREADCRUMB
+========================= */
+
+.account-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #825a3c;
+  font-size: 13px;
+  margin-bottom: 12px;
+  margin-top: -100px;
+}
+
+.account-breadcrumb a {
+  color: #825a3c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.account-breadcrumb a:hover {
+  color: #d4880a;
+}
+
+.account-breadcrumb span {
+  color: #b7a087;
+}
+
+/* =========================
+   4. TITLE
+========================= */
+
+.account-title {
+  color: #674831;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   5. USER INFO CARD
+========================= */
+
+.account-user-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(130, 90, 60, 0.2);
+  border-radius: 12px;
+  padding: 22px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  box-shadow: 0 5px 14px rgba(61, 32, 11, 0.06);
+  margin-bottom: 22px;
+}
+
+.user-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background-color: #f2e7db;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.user-avatar span {
+  color: #825a3c;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.user-info h2 {
+  color: #674831;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.user-contact {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: #674831;
+}
+
+.user-contact p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #674831;
+  font-size: 16px;
+}
+
+.user-contact p span {
+  color: #825a3c;
+  font-size: 18px;
+}
+
+.contact-line {
+  width: 1px;
+  height: 20px;
+  background-color: #d8c6b5;
+}
+
+/* =========================
+   6. ACCOUNT MENU GRID
+========================= */
+
+.account-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+}
+
+.account-menu-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(130, 90, 60, 0.18);
+  border-radius: 12px;
+  padding: 22px 28px;
+
+  display: grid;
+  grid-template-columns: 68px 1fr 22px;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 108px;
+  color: #674831;
+
+  box-shadow: 0 5px 14px rgba(61, 32, 11, 0.06);
+  transition: all 0.2s ease;
+}
+
+.account-menu-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 136, 10, 0.55);
+  box-shadow: 0 9px 22px rgba(61, 32, 11, 0.12);
+}
+
+/* =========================
+   7. ICON TRONG CARD
+========================= */
+
+.menu-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #f2e7db;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #825a3c;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* =========================
+   8. TEXT TRONG CARD
+========================= */
+
+.menu-text h3 {
+  color: #674831;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.menu-text p {
+  color: #825a3c;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+/* =========================
+   9. MŨI TÊN
+========================= */
+
+.menu-arrow {
+  color: #674831;
+  font-size: 32px;
+  line-height: 1;
+  justify-self: end;
+  transition: all 0.2s ease;
+}
+
+.account-menu-card:hover .menu-arrow {
+  transform: translateX(4px);
+  color: #d4880a;
+}
+
+/* =========================
+   10. RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .account-container {
+    max-width: 92%;
+  }
+
+  .account-box {
+    padding: 18px 24px 26px;
+  }
+
+  .account-title {
+    font-size: 32px;
+  }
+
+  .account-user-card {
+    padding: 22px 26px;
+  }
+
+  .account-menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .account-page {
+    padding: 18px 0 36px;
+  }
+
+  .account-box {
+    padding: 16px 18px 24px;
+  }
+
+  .account-title {
+    font-size: 28px;
+  }
+
+  .account-user-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 20px;
+  }
+
+  .user-avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  .user-avatar span {
+    font-size: 34px;
+  }
+
+  .user-info h2 {
+    font-size: 24px;
+  }
+
+  .user-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-line {
+    display: none;
+  }
+
+  .account-menu-card {
+    grid-template-columns: 58px 1fr 20px;
+    padding: 20px 18px;
+    min-height: 98px;
+    gap: 16px;
+  }
+
+  .menu-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .menu-text h3 {
+    font-size: 18px;
+  }
+
+  .menu-text p {
+    font-size: 14px;
+  }
+
+  .menu-arrow {
+    font-size: 28px;
+  }
+}

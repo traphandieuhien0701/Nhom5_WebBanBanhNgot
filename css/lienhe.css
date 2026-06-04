@@ -1,0 +1,249 @@
+:root {
+  --lh-brown-bg: #8B5A2B;      /* Màu nền banner nâu lớn */
+  --lh-cream-bg: #FDF7F2;      /* Màu kem nhạt của toàn trang */
+  --lh-text-brown: #5C3A21;    /* Màu chữ nâu đậm */
+  --lh-text-sub: #8E7361;      /* Màu chữ phụ */
+}
+
+body {
+  background-color: var(--lh-cream-bg);
+}
+
+/* 1. Phần Banner Màu Nâu */
+.lh-banner {
+  background-color: var(--brown);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.lh-banner-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lh-banner h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.lh-banner-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* 3 ô thông số nhỏ */
+.lh-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.stat-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px 24px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-title {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--light-yellow);
+}
+
+/* 2. Breadcrumb */
+.lh-breadcrumb {
+  padding: 24px 0;
+  font-size: 16px;
+  color: var(--lh-text-sub);
+}
+.lh-breadcrumb a {
+  text-decoration: none;
+  color: var(--lh-text-sub);
+}
+.lh-breadcrumb .active {
+  color: var(--lh-text-brown);
+}
+
+/* 3. Lưới 4 ô địa chỉ */
+.lh-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+}
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #EEDCC8;
+  border-radius: 16px;
+  padding: 16px 20px;
+  position: relative;
+}
+.card-body {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+.card-icon {
+  font-size: 24px;
+  padding-top: 2px;
+}
+.card-text h3 {
+  font-size: 13px;
+  color: var(--lh-text-sub);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.main-text {
+  font-size: 15px;
+  color: var(--brown-1);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.sub-text {
+  font-size: 13px;
+  color: #A08068;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+/* 4. Khung Form gộp giữa */
+.lh-form-section {
+  padding-bottom: 80px;
+}
+.lh-form-box {
+  background-color: #ffffff;
+  border: 1px solid #EEDCC8;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.lh-form-box h2 {
+  text-align: center;
+  color: var(--lh-text-brown);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.form-subtitle {
+  text-align: center;
+  color: var(--lh-text-sub);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-size: 14px;
+  color: var(--lh-text-brown);
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  border: 1px solid #D2B48C;
+  border-radius: 20px; /* Bo tròn dài theo mẫu */
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--lh-text-brown);
+  outline: none;
+}
+.form-group textarea {
+  border-radius: 14px;
+  resize: none;
+}
+
+/* Phần radio tag chọn loại hỗ trợ */
+.tag-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.tag-btn input {
+  display: none; /* Ẩn nút tròn radio mặc định */
+}
+.tag-btn span {
+  display: inline-block;
+  border: 1px solid #D2B48C;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 13px;
+  color: var(--lh-text-brown);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tag-btn input:checked + span {
+  background-color: var(--lh-text-brown);
+  color: #ffffff;
+  border-color: var(--lh-text-brown);
+}
+.tag-btn :hover{
+  background-color: var(--lh-text-brown);
+  color: #ffffff;
+}
+/* Nút bấm gửi tin nhắn căn giữa */
+.form-submit-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn-send {
+  background-color: #ffffff;
+  border: 1px solid var(--lh-text-brown);
+  color: var(--lh-text-brown);
+  padding: 10px 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.btn-send:hover {
+  background-color: var(--lh-text-brown);
+  color: #ffffff;
+}
+
+/* ── Xử lý khi xem trên Điện thoại (Responsive) ── */
+@media (max-width: 768px) {
+  .lh-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-box {
+    width: 80%;
+  }
+  .lh-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .tag-group {
+    flex-wrap: wrap;
+  }
+  .lh-form-box {
+    padding: 20px;
+  }
+}

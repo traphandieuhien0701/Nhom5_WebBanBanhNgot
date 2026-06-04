@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Cake - Chi tiết sản phẩm</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chi-tiet-san-pham.css" />
+
+    <!-- link box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo_chu.png" alt="Sweet Cake" />
+        </a>
+
+        <nav class="menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="text" />
+            <span>🔍</span>
+          </div>
+
+          <a href="dang-nhap.html" class="header-icon">
+            <span>👤</span>
+            <small>Đăng nhập/Đăng ký</small>
+          </a>
+
+          <a href="gio-hang.html" class="header-icon">
+            <span>🛒</span>
+            <small>Giỏ hàng</small>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="product-detail-page">
+      <div class="container detail-container">
+        <!-- BREADCRUMB -->
+        <p class="breadcrumb">
+          <a href="index.html">Trang chủ</a>
+          <span>&gt;</span>
+          <a href="san-pham.html">Sản phẩm</a>
+          <span>&gt;</span>
+          <a href="chi-tiet-san-pham.html">Chi tiết sp</a>
+        </p>
+
+        <!-- CHI TIẾT SẢN PHẨM -->
+        <section class="detail-layout">
+          <!-- CỘT TRÁI: ẢNH SẢN PHẨM -->
+          <div class="detail-images">
+            <div class="main-product-image">
+              <img
+                id="mainProductImage"
+                src="images/cakeview2.png"
+                alt="Bánh kem nhân vật hoạt hình"
+              />
+            </div>
+
+            <div class="thumbnail-list">
+              <button
+                class="thumbnail-item active"
+                type="button"
+                data-image="images/cakeview2.png"
+              >
+                <img src="images/cakeview2.png" alt="Ảnh bánh 1" />
+              </button>
+
+              <button
+                class="thumbnail-item"
+                type="button"
+                data-image="images/cakeview1.png"
+              >
+                <img src="images/cakeview1.png" alt="Ảnh bánh 2" />
+              </button>
+
+              <button
+                class="thumbnail-item"
+                type="button"
+                data-image="images/cakeview3.png"
+              >
+                <img src="images/cakeview3.png" alt="Ảnh bánh 3" />
+              </button>
+            </div>
+          </div>
+
+          <!-- CỘT PHẢI: THÔNG TIN SẢN PHẨM -->
+          <div class="detail-info">
+            <h1>Bánh kem nhân vật hoạt hình</h1>
+
+            <div class="price-row">
+              <span class="current-price">250.000đ</span>
+              <span class="old-price">360.000đ</span>
+            </div>
+
+            <div class="detail-rating">★★★★★</div>
+
+            <p class="product-description">
+              "Bánh kem nhân vật hoạt hình với tạo hình Shin đang ngủ vô cùng
+              ngộ nghĩnh, đáng yêu. Lớp kem tươi mềm mịn, ngọt thanh kết hợp
+              cùng cốt bánh bông lan xốp mềm, mang đến niềm vui trọn vẹn và
+              hương vị ngọt ngào cho bữa tiệc sinh nhật."
+            </p>
+
+            <!-- NHÂN BÁNH -->
+            <div class="option-group">
+              <h3>NHÂN BÁNH</h3>
+
+              <div class="option-list">
+                <button class="option-btn active" type="button">Socola</button>
+                <button class="option-btn" type="button">Dâu</button>
+                <button class="option-btn" type="button">Xoài</button>
+              </div>
+            </div>
+
+            <!-- CỠ BÁNH -->
+            <div class="option-group">
+              <h3>CỠ BÁNH</h3>
+
+              <div class="option-list">
+                <button class="option-btn active" type="button">10cm</button>
+                <button class="option-btn" type="button">15cm</button>
+                <button class="option-btn" type="button">20cm</button>
+              </div>
+            </div>
+
+            <!-- SỐ LƯỢNG -->
+            <div class="quantity-row">
+              <h3>SỐ LƯỢNG</h3>
+
+              <div class="quantity-box">
+                <button type="button" onclick="decreaseQuantity()">-</button>
+                <span id="quantity">1</span>
+                <button type="button" onclick="increaseQuantity()">+</button>
+              </div>
+            </div>
+
+            <!-- NÚT MUA -->
+            <div class="detail-actions">
+              <button class="cart-btn" type="button">🛒</button>
+              <a href="gio-hang.html" class="buy-btn">Mua ngay</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SẢN PHẨM LIÊN QUAN -->
+        <section class="related-section">
+          <h2>Sản phẩm liên quan</h2>
+
+          <div class="related-grid">
+            <a href="chi-tiet-san-pham.html" class="related-card">
+              <img src="images/cake 7.png" alt="Bánh kem" />
+              <div class="related-info">
+                <strong>200.000VNĐ</strong>
+                <h3>Tên sản phẩm</h3>
+                <p><b>4.8</b> <span>★★★★★</span></p>
+              </div>
+            </a>
+
+            <a href="chi-tiet-san-pham.html" class="related-card">
+              <img src="images/cake 2.png" alt="Bánh kem" />
+              <div class="related-info">
+                <strong>200.000VNĐ</strong>
+                <h3>Tên sản phẩm</h3>
+                <p><b>4.8</b> <span>★★★★★</span></p>
+              </div>
+            </a>
+
+            <a href="chi-tiet-san-pham.html" class="related-card">
+              <img src="images/mini cake.png" alt="Bánh kem" />
+              <div class="related-info">
+                <strong>200.000VNĐ</strong>
+                <h3>Tên sản phẩm</h3>
+                <p><b>4.8</b> <span>★★★★★</span></p>
+              </div>
+            </a>
+
+            <a href="chi-tiet-san-pham.html" class="related-card">
+              <img src="images/cake 8.png" alt="Bánh kem" />
+              <div class="related-info">
+                <strong>200.000VNĐ</strong>
+                <h3>Tên sản phẩm</h3>
+                <p><b>4.8</b> <span>★★★★★</span></p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <img
+            src="images/logo_ngang.png"
+            alt="Sweet Cake"
+            class="footer-logo"
+          />
+
+          <p>
+            Mang đến những chiếc bánh thơm ngon được làm từ nguyên liệu chất
+            lượng và tình yêu trong từng công đoạn.
+          </p>
+
+          <div class="socials">
+            <span>f</span>
+            <span>◎</span>
+            <span>𝕏</span>
+            <span>▶</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Liên kết nhanh</h3>
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Chính sách giao hàng</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Hình thức thanh toán</a>
+          <a href="#">Câu hỏi thường gặp</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Thông tin liên hệ</h3>
+          <p>123 Đường ngọt ngào, TP.Kẹo Ngọt</p>
+          <p>0123456789</p>
+          <p>hello@sweetcake.vn</p>
+          <p>8:00 - 21:00<br />Thứ 2 - Thứ 7</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">©2026 Sweet Cake. All rights reserved</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/chi-tiet-san-pham.js"></script>
+  </body>
+</html>

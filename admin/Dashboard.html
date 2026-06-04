@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&family=Inter:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Dashboard.css" />
+    <!-- Basic Icons -->
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+        <!-- Filled Icons -->
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+        <!-- Brand Icons -->
+        <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo_chu.png" alt="Sweet Cake" />
+        </a>
+
+        <nav class="menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="text" />
+            <span>🔍</span>
+          </div>
+
+          <a href="dang-nhap.html" class="header-icon">
+            <span>👤</span>
+            <small>Đăng nhập/Đăng ký</small>
+          </a>
+
+          <a href="gio-hang.html" class="header-icon">
+            <span>🛒</span>
+            <small>Giỏ hàng</small>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <main class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <span class="icon">□</span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quan-ly-san-pham.html">
+                        <span class="icon">□</span>
+                        Quản lý sản phẩm
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quan-ly-don-hang.html">
+                        <span class="icon">□</span>
+                        Quản lý đơn hàng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="khach-hang.html">
+                        <span class="icon">□</span>
+                        Khách hàng
+                    </a>
+                </li>
+
+                <li>
+                    <a href="thong-ke.html">
+                        <span class="icon">□</span>
+                        Thống kê
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cai-dat.html">
+                        <span class="icon">□</span>
+                        Cài đặt
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTENT -->
+        <section class="dashboard-content">
+
+            <h1 class="page-title">Dashboard</h1>
+
+            <!-- THỐNG KÊ -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <i class="bx bx-bookmark" ></i>
+                    <p>Tổng đơn hàng</p>
+                    <h3>184</h3>
+                </div>
+
+                <div class="stat-card">
+                    <i class="bx bx-bar-chart" ></i>
+                    <p>Doanh thu</p>
+                    <h3>5.2tr</h3>
+                </div>
+
+                <div class="stat-card">
+                    <i class="bx bx-database" ></i>
+                    <p>SP đang bán</p>
+                    <h3>50</h3>
+                </div>
+
+                <div class="stat-card">
+                    <i class="bx bx-user" ></i>
+                    <p>Khách hàng</p>
+                    <h3>228</h3>
+                </div>
+
+            </div>
+
+            <!-- BIỂU ĐỒ -->
+            <div class="chart-card">
+                <h3>Doanh thu</h3>
+            </div>
+
+            <!-- BẢNG -->
+            <div class="table-wrapper">
+
+                <div class="table-card">
+                    <h3>Đơn hàng mới</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Khách hàng</th>
+                                <th>SP</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tên khách hàng</td>
+                                <td>1</td>
+                                <td>120k</td>
+                                <td><span class="status-new">Mới</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Tên khách hàng</td>
+                                <td>6</td>
+                                <td>680k</td>
+                                <td><span class="status-done">Xong</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Tên khách hàng</td>
+                                <td>5</td>
+                                <td>560k</td>
+                                <td><span class="status-wait">Chờ</span></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="table-card">
+
+                    <h3>Sản phẩm sắp hết</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Sản phẩm</th>
+                                <th>Tồn kho</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tiramisu truyền thống</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Mousse chanh dây</td>
+                                <td>6</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Bánh kem dâu</td>
+                                <td>8</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>Bánh su kem</td>
+                                <td>4</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>Croissant bơ</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- footer -->
+      <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <img
+            src="images/logo_ngang.png"
+            alt="Sweet Cake"
+            class="footer-logo"
+          />
+          <p>
+            Mang đến những chiếc bánh thơm ngon được làm từ nguyên liệu chất
+            lượng và tình yêu trong từng công đoạn.
+          </p>
+          <div class="socials">
+            <span>f</span>
+            <span>◎</span>
+            <span>𝕏</span>
+            <span>▶</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Liên kết nhanh</h3>
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Chính sách giao hàng</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Hình thức thanh toán</a>
+          <a href="#">Câu hỏi thường gặp</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Thông tin liên hệ</h3>
+          <p>123 Đường ngọt ngào, TP.Kẹo Ngọt</p>
+          <p>0123456789</p>
+          <p>hello@sweetcake.vn</p>
+          <p>8:00 - 21:00<br />Thứ 2 - Thứ 7</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">©2026 Sweet Cake. All rights reserved</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,727 @@
+/* =========================================================
+   FILE: style.css
+   MỤC ĐÍCH:
+   - File CSS dùng chung cho toàn bộ website Sweet Cake.
+   - Chỉ đặt những phần lặp lại ở nhiều trang:
+     + Màu sắc
+     + Reset CSS
+     + Font chữ
+     + Container
+     + Header
+     + Footer
+     + Button
+     + Card sản phẩm
+     + Card danh mục
+     + Responsive chung
+
+   LƯU Ý CHO NHÓM:
+   - Không viết CSS riêng của từng trang vào file này.
+   - CSS riêng của trang chủ viết trong: home.css
+   - CSS riêng của sản phẩm viết trong: san-pham.css
+   - CSS riêng của chi tiết sản phẩm viết trong: chi-tiet-san-pham.css
+   ========================================================= */
+
+/* =========================================================
+   1. FONT CHỮ DÙNG CHUNG
+   - Toàn bộ website dùng font Inder.
+   - Nếu đã link font trong HTML rồi thì dòng @import này vẫn dùng được.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
+
+/* =========================================================
+   2. BIẾN MÀU DÙNG CHUNG
+   - Màu lấy theo bảng màu trong Figma.
+   - Khi cần đổi màu toàn web, ưu tiên sửa ở đây.
+   ========================================================= */
+
+:root {
+  /* Màu đen và nâu */
+  --black: #000000;
+  --dark-brown: #3d200b;
+  --brown-2: #674831;
+  --medium-brown: #825a3c;
+  --light-brown: #b7a087;
+  --flash: #ff5725;
+  --brown: #7b4e2d;
+  --brown-1: #5c2a0e;
+
+  /* Màu nền kem */
+  --cream: #f7ebdf;
+
+  /* Màu cam/vàng */
+  --orange: #d4880a;
+  --yellow: #ffc107;
+  --light-yellow: #ffeb9d;
+
+  /* Màu cơ bản */
+  --white: #ffffff;
+
+  /* Màu chữ và nền mặc định */
+  --text-color: #674831;
+  --main-bg: #f7ebdf;
+}
+
+/* =========================================================
+   3. RESET CSS
+   - Xóa margin/padding mặc định của trình duyệt.
+   - Giúp giao diện hiển thị đồng đều hơn.
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   4. CẤU HÌNH CHUNG CHO BODY
+   - Font chung toàn bài là Inder.
+   - Nền mặc định là màu kem.
+   ========================================================= */
+
+body {
+  font-family: "Inder", Arial, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+/* =========================================================
+   5. CẤU HÌNH CHUNG CHO LINK, LIST, IMAGE
+   ========================================================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================================
+   6. CONTAINER DÙNG CHUNG
+   - Dùng để căn giữa nội dung.
+   - Các trang nên bọc nội dung trong .container.
+   ========================================================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   7. HEADER DÙNG CHUNG
+   - Header xuất hiện ở tất cả các trang.
+   - Gồm: logo, menu, ô tìm kiếm, đăng nhập, giỏ hàng.
+   ========================================================= */
+
+.header {
+  background-color: var(--medium-brown);
+  height: 118px;
+  display: flex;
+  align-items: center;
+  color: var(--cream);
+}
+
+.header-inner {
+  width: 94%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 205px;
+  height: auto;
+  display: block;
+}
+
+/* Menu điều hướng */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  flex-shrink: 0;
+}
+
+.menu a {
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: var(--light-yellow);
+}
+
+/* Khu vực bên phải header: search, đăng nhập, giỏ hàng */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+/* Ô tìm kiếm */
+.search-box {
+  width: 190px;
+  height: 32px;
+  background-color: var(--cream);
+  border: 1.5px solid var(--cream);
+  border-radius: 999px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 38px 0 14px;
+  overflow: hidden;
+}
+
+/* Input tìm kiếm - xóa viền trong */
+.search-box input {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  font-size: 13px;
+  color: var(--dark-brown);
+  font-family: "Inder", Arial, sans-serif;
+}
+
+.search-box input::placeholder {
+  color: #9c7a5f;
+}
+
+/* Nút kính lúp */
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--dark-brown);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon kính lúp */
+.search-box i,
+.search-btn i,
+.search-box span {
+  font-size: 20px;
+  color: var(--dark-brown);
+  line-height: 1;
+  display: block;
+}
+
+/* Icon đăng nhập và giỏ hàng */
+.header-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--cream);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  min-width: 48px;
+}
+
+.header-icon i,
+.header-icon span {
+  font-size: 23px;
+  color: var(--cream);
+  line-height: 1;
+  display: block;
+}
+
+.header-icon small {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--cream);
+}
+
+.header-icon:hover,
+.header-icon:hover i,
+.header-icon:hover span,
+.header-icon:hover small {
+  color: var(--light-yellow);
+}
+
+/* =========================================================
+   8. BUTTON DÙNG CHUNG
+   - Dùng cho: Đặt hàng, Xem sản phẩm, Mua ngay, Xem thêm.
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 8px;
+  border: 3px solid var(--medium-brown);
+  color: var(--medium-brown);
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--medium-brown);
+  color: var(--cream);
+}
+
+/* Button nhỏ hơn, dùng trong card hoặc trang phụ */
+.btn-small {
+  min-width: 120px;
+  height: 38px;
+  font-size: 16px;
+  border-width: 2px;
+}
+
+/* Button có nền nâu sẵn */
+.btn-fill {
+  background-color: var(--medium-brown);
+  color: var(--cream);
+}
+
+.btn-fill:hover {
+  background-color: var(--dark-brown);
+  border-color: var(--dark-brown);
+}
+
+/* =========================================================
+   9. SECTION TITLE DÙNG CHUNG
+   - Dùng cho tiêu đề dạng:
+     Danh mục sản phẩm --------
+     Sản phẩm nổi bật --------
+   ========================================================= */
+
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  margin-bottom: 36px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-title h2 {
+  color: var(--brown);
+  font-size: 42px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.section-title-line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--light-brown);
+}
+
+.section-title p {
+  margin-top: 14px;
+  color: var(--medium-brown);
+  font-size: 18px;
+}
+
+/* =========================================================
+   10. CATEGORY CARD DÙNG CHUNG
+   - Dùng cho các ô danh mục:
+     Tiramisu, Bánh kem, Donut, Cupcake...
+   ========================================================= */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px;
+}
+
+.category-card {
+  background-color: var(--white);
+  border-radius: 14px;
+  padding: 24px 18px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(61, 32, 11, 0.12);
+}
+
+.category-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+
+.category-card h3 {
+  color: var(--brown);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   11. PRODUCT CARD DÙNG CHUNG
+   - Dùng cho card sản phẩm ở nhiều trang:
+     Trang chủ, Sản phẩm, Bánh mới, Chi tiết sản phẩm.
+   ========================================================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px;
+}
+
+.product-card {
+  width: 280px;
+  height: auto;
+  border: 2px solid #d2b48c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--black);
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(61, 32, 11, 0.14);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 12px 14px;
+}
+
+.product-price {
+  display: block;
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-name {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--black);
+  font-size: 13px;
+}
+
+.stars {
+  color: var(--yellow);
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   12. FOOTER DÙNG CHUNG
+   - Footer xuất hiện ở tất cả các trang.
+   - Gồm: logo, mô tả, liên kết nhanh, hỗ trợ, liên hệ.
+   ========================================================= */
+
+.footer {
+  background-color: var(--medium-brown);
+  color: var(--cream);
+  padding-top: 48px;
+}
+
+.footer-inner {
+  width: 88%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1.25fr 1.2fr;
+  gap: 86px;
+  padding-bottom: 36px;
+}
+
+/* Cột logo + mô tả */
+.footer-logo {
+  width: 205px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-about p {
+  max-width: 260px;
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+/* Icon mạng xã hội */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.socials span {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--light-yellow);
+  background-color: var(--light-yellow);
+  color: var(--dark-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Các cột thông tin trong footer */
+.footer-col h3 {
+  display: inline-block;
+  color: var(--light-yellow);
+  font-size: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Gạch dưới tiêu đề footer */
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 55px;
+  height: 2px;
+  background-color: var(--light-yellow);
+}
+
+.footer-col a,
+.footer-col p {
+  display: block;
+  color: var(--cream);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer-col a {
+  margin-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+/* Dấu mũi tên trước link footer */
+.footer-col a::before {
+  content: "›";
+  margin-right: 14px;
+  color: var(--cream);
+  font-size: 24px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover,
+.footer-col a:hover::before {
+  color: var(--light-yellow);
+}
+
+/* Dòng copyright */
+.footer-bottom {
+  border-top: 1px solid rgba(61, 32, 11, 0.8);
+  text-align: center;
+  padding: 16px 0;
+  color: var(--cream);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   13. RESPONSIVE CHUNG
+   - Chỉ đặt responsive cho phần dùng chung.
+   - Responsive riêng từng trang viết trong file CSS riêng.
+   ========================================================= */
+
+/* Màn hình nhỏ hơn laptop */
+@media (max-width: 1200px) {
+  .menu {
+    gap: 22px;
+  }
+
+  .header-actions {
+    gap: 22px;
+  }
+
+  .search-box {
+    width: 180px;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .header {
+    height: auto;
+    padding: 18px 0;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 14px;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+/* Mobile ngang / tablet nhỏ */
+@media (max-width: 768px) {
+  .logo img {
+    width: 150px;
+  }
+
+  .header-actions {
+    gap: 14px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-icon small {
+    font-size: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-col h3 {
+    font-size: 20px;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 576px) {
+  .container {
+    width: 92%;
+  }
+
+  .header-inner {
+    gap: 16px;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .header-icon small {
+    display: none;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+
+  .footer-bottom {
+    font-size: 16px;
+  }
+}

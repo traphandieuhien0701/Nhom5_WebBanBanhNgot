@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Cake - Khuyến mãi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/khuyenmai.css" />
+    <!-- link box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo_chu.png" alt="Sweet Cake" />
+        </a>
+
+        <nav class="menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <form class="search-box" action="san-pham.html" method="get">
+            <input
+              type="text"
+              name="keyword"
+              placeholder="Tìm kiếm sản phẩm..."
+            />
+
+            <button type="submit" class="search-btn" aria-label="Tìm kiếm">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+
+          <a href="tai-khoan.html" class="header-icon">
+            <i class="bx bx-user"></i>
+            <small>Tài khoản</small>
+          </a>
+
+          <a href="gio-hang.html" class="header-icon">
+            <i class="bx bx-cart bx-flip-horizontal"></i>
+            <small>Giỏ hàng</small>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. BREADCRUMB -->
+      <div class="km-breadcrumb">
+        <div class="container">
+          <a href="index.html">Trang chủ</a>
+          <span> › </span>
+          <span>Khuyến mãi</span>
+        </div>
+      </div>
+
+      <!-- 2. FLASH SALE -->
+      <section class="km-flash">
+        <div class="container">
+          <!-- Banner đếm ngược -->
+          <div class="km-flash-banner">
+            <span class="km-flash-title">Flash Sale – Giảm đến 40%</span>
+            <div class="km-countdown">
+              <span class="km-count-box" id="cd-h">05</span>
+              <span class="km-count">:</span>
+              <span class="km-count-box" id="cd-m">19</span>
+              <span class="km-count">:</span>
+              <span class="km-count-box" id="cd-s">32</span>
+            </div>
+          </div>
+
+          <div class="km-product-grid">
+            <div class="product-card">
+              <img src="images/crepe 4.png" alt="Crepe trân châu" />
+              <div class="product-info">
+                <span class="product-price"
+                  >140.000đ
+                  <s class="km-old-price">200.000đ</s>
+                </span>
+                <h3 class="product-name">Crepe trân châu</h3>
+                <p class="product-rating">
+                  4.8 <span class="stars">★★★★★</span>
+                  <span class="km-sold">Còn 18</span>
+                </p>
+              </div>
+              <button class="btn btn-small km-add-btn">Thêm vào giỏ</button>
+            </div>
+
+            <!-- 2 -->
+            <div class="product-card">
+              <img src="images/cake 8.png" alt="Bánh kem thú" />
+              <div class="product-info">
+                <span class="product-price"
+                  >250.000đ
+                  <s class="km-old-price">300.000đ</s>
+                </span>
+                <h3 class="product-name">Bánh kem thú</h3>
+                <p class="product-rating">
+                  4.8 <span class="stars">★★★★★</span>
+                  <span class="km-sold">Còn 10</span>
+                </p>
+              </div>
+              <button class="btn btn-small km-add-btn">Thêm vào giỏ</button>
+            </div>
+
+            <!-- 3 -->
+            <div class="product-card">
+              <img src="images/crepe 3.png" alt="Crepe matcha" />
+              <div class="product-info">
+                <span class="product-price"
+                  >120.000đ
+                  <s class="km-old-price">200.000đ</s>
+                </span>
+                <h3 class="product-name">Crepe matcha</h3>
+                <p class="product-rating">
+                  4.8 <span class="stars">★★★★★</span>
+                  <span class="km-sold">Còn 10</span>
+                </p>
+              </div>
+              <button class="btn btn-small km-add-btn">Thêm vào giỏ</button>
+            </div>
+
+            <!--4 -->
+            <div class="product-card">
+              <img src="images/cupcake 6.png" alt="Tiramisu trần châu" />
+              <div class="product-info">
+                <span class="product-price"
+                  >140.000đ
+                  <s class="km-old-price">200.000đ</s>
+                </span>
+                <h3 class="product-name">Tiramisu trần châu</h3>
+                <p class="product-rating">
+                  4.8 <span class="stars">★★★★★</span>
+                  <span class="km-sold">Còn 18</span>
+                </p>
+              </div>
+              <button class="btn btn-small km-add-btn">Thêm vào giỏ</button>
+            </div>
+          </div>
+
+          <!-- Phân trang -->
+          <div class="km-pagination">
+            <a href="#" class="km-page-btn">←</a>
+            <a href="#" class="km-page-btn active">1</a>
+            <a href="#" class="km-page-btn">2</a>
+            <span>...</span>
+            <a href="#" class="km-page-btn">5</a>
+            <a href="#" class="km-page-btn">6</a>
+            <a href="#" class="km-page-btn">→</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. COMBO TIẾT KIỆM -->
+      <section class="km-combo">
+        <div class="container">
+          <div class="home-section-title">
+            <div class="title-row">
+              <h2>Combo tiết kiệm</h2>
+            </div>
+            <p>Mua kết hợp – Tiết kiệm hơn khi mua lẻ</p>
+          </div>
+
+          <!-- Lưới combo -->
+          <div class="km-combo-grid">
+            <div class="km-combo-card">
+              <div class="combo">
+                <img src="images/combo6.png" alt="bánh kem" />
+                <img src="images/combo5.png" alt="donut" />
+                <img src="images/combo7.png" alt="donut" />
+              </div>
+              <h3>Combo tiệc sinh nhật</h3>
+              <p>1 bánh kem + 6 cupcake + 4 donut. Đủ cho 10–15 người</p>
+              <a href="#" class="btn btn-small">Xem ngay</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="km-combo-card">
+              <div class="combo">
+                <img src="images/combo2.png" alt="bánh kem" />
+                <img src="images/combo4.png" alt="donut" />
+                <img src="images/combo3.png" alt="donut" />
+              </div>
+              <h3>Combo quà tặng</h3>
+              <p>1 bánh tiramisu + 1 mousse cake + 1 hộp quà sang trọng</p>
+              <a href="#" class="btn btn-small">Xem ngay</a>
+            </div>
+
+            <!--3 -->
+            <div class="km-combo-card">
+              <div class="combo">
+                <img src="images/combo1.png" alt="bánh kem" />
+                <img src="images/combo8.png" alt="croissant" />
+                <img src="images/combo9.png" alt="donut" />
+              </div>
+              <h3>Combo socola</h3>
+              <p>1 bánh brownie + 2 croissant socola + 2 donut socola</p>
+              <a href="#" class="btn btn-small">Xem ngay</a>
+            </div>
+          </div>
+
+          <!-- Phân trang combo -->
+          <div class="km-pagination">
+            <a href="#" class="km-page-btn">←</a>
+            <a href="#" class="km-page-btn active">1</a>
+            <a href="#" class="km-page-btn">2</a>
+            <span>...</span>
+            <a href="#" class="km-page-btn">5</a>
+            <a href="#" class="km-page-btn">6</a>
+            <a href="#" class="km-page-btn">→</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: copy y chang từ index.html -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <img
+            src="images/logo_ngang.png"
+            alt="Sweet Cake"
+            class="footer-logo"
+          />
+          <p>
+            Mang đến những chiếc bánh thơm ngon được làm từ nguyên liệu chất
+            lượng và tình yêu trong từng công đoạn.
+          </p>
+          <div class="socials">
+            <span>f</span>
+            <span>◎</span>
+            <span>𝕏</span>
+            <span>▶</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Liên kết nhanh</h3>
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Chính sách giao hàng</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Hình thức thanh toán</a>
+          <a href="#">Câu hỏi thường gặp</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Thông tin liên hệ</h3>
+          <p>123 Đường ngọt ngào, TP.Kẹo Ngọt</p>
+          <p>0123456789</p>
+          <p>hello@sweetcake.vn</p>
+          <p>8:00 - 21:00<br />Thứ 2 - Thứ 7</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">©2026 Sweet Cake. All rights reserved</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+  </body>
+</html>

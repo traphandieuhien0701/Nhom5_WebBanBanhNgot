@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Cake - Quên mật khẩu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/quenmk.css" />
+    <!-- link box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo"
+          ><img src="images/logo_chu.png" alt="Sweet Cake"
+        /></a>
+        <nav class="menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+          <form class="search-box" action="san-pham.html" method="get">
+            <input
+              type="text"
+              name="keyword"
+              placeholder="Tìm kiếm sản phẩm..."
+            />
+
+            <button type="submit" class="search-btn" aria-label="Tìm kiếm">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+
+          <a href="tai-khoan.html" class="header-icon">
+            <i class="bx bx-user"></i>
+            <small>Tài khoản</small>
+          </a>
+
+          <a href="gio-hang.html" class="header-icon">
+            <i class="bx bx-cart bx-flip-horizontal"></i>
+            <small>Giỏ hàng</small>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="register-page">
+      <div class="container">
+        <div class="register-card-box">
+          <div class="step-progress-bar">
+            <div class="step-num active">1</div>
+            <div class="step-num">2</div>
+            <div class="step-num">3</div>
+            <div class="step-num">4</div>
+          </div>
+
+          <div class="register-avatar">
+            <img src="images/logo2.png" alt="Sweet Cake Illustrate" />
+          </div>
+
+          <h1 class="register-main-title">Quên mật khẩu</h1>
+          <p class="register-subtitle">
+            Nhập email để nhận mã xác nhận đặt lại mật khẩu
+          </p>
+
+          <form class="forget-password-form" action="#" method="POST">
+            <div class="input-field-group">
+              <label for="forget-email">Email</label>
+              <input type="email" id="forget-email" required />
+            </div>
+
+            <button
+              type="button"
+              class="btn-submit-action"
+              onclick="window.location.href = 'quenmk-2.html'"
+            >
+              Gửi mã xác nhận
+            </button>
+          </form>
+
+          <a href="dang-nhap.html" class="back-to-login-link">
+            <span class="arrow">&larr;</span> Quay lại đăng nhập
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <img
+            src="images/logo_ngang.png"
+            alt="Sweet Cake"
+            class="footer-logo"
+          />
+          <p>
+            Mang đến những chiếc bánh thơm ngon được làm từ nguyên liệu chất
+            lượng và tình yêu trong từng công đoạn.
+          </p>
+          <div class="socials">
+            <span>f</span>
+            <span>◎</span>
+            <span>𝕏</span>
+            <span>▶</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Liên kết nhanh</h3>
+          <a href="index.html">Trang chủ</a>
+          <a href="san-pham.html">Sản phẩm</a>
+          <a href="banh-moi.html">Bánh mới</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="tin-tuc.html">Tin tức</a>
+          <a href="lien-he.html">Liên hệ</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Hỗ trợ khách hàng</h3>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Chính sách giao hàng</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Hình thức thanh toán</a>
+          <a href="#">Câu hỏi thường gặp</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Thông tin liên hệ</h3>
+          <p>123 Đường ngọt ngào, TP.Kẹo Ngọt</p>
+          <p>0123456789</p>
+          <p>hello@sweetcake.vn</p>
+          <p>8:00 - 21:00<br />Thứ 2 - Thứ 7</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">©2026 Sweet Cake. All rights reserved</div>
+    </footer>
+  </body>
+</html>
