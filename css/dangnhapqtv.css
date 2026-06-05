@@ -1,0 +1,164 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inder", Arial, sans-serif;
+    background:#fdf7f2;
+}
+
+/* PHẦN GIỮA */
+.admin-login{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 0;
+}
+
+/* KHUNG LOGIN */
+.login-box{
+    width:500px;
+    height: 600px;
+    background: #faf0e6;
+
+    border-radius:25px ;
+
+    padding:45px 50px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+.login-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom:20px;
+}
+
+.login-logo img{
+    width:100px;
+    
+}
+
+/* TIÊU ĐỀ */
+.login-box h2{
+    text-align:center;
+
+    color:#7a4c15;
+
+    font-size:26PX;
+
+    margin-bottom:35px;
+}
+
+/* LABEL */
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+
+    margin-bottom:14px;
+
+    font-weight:600;
+
+    color:#6a4318;
+}
+
+/* INPUT */
+.form-group input{
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #c8b39b;
+
+    border-radius:5px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+/* PASSWORD */
+.password-box{
+    position:relative;
+}
+
+.show-pass{
+    position:absolute;
+
+    right:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+/* BUTTON */
+.btn-login{
+    width:100%;
+
+    margin-top:10px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#faf0e6;
+
+    border:1px solid #5C3A21;
+
+    color:#5C3A21;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn-login:hover{
+    background:#7a4c15;
+    color:white;
+}
+
+/* LINK */
+.login-links{
+    text-align:center;
+
+    margin-top:18px;
+
+    font-size:15px;
+}
+
+.login-links a{
+    text-decoration:none;
+    color:#7a4c15;
+    
+}
+
+.login-links a:hover{
+    text-decoration:underline;
+}
+#error-message{
+    color:red;
+    text-align:center;
+    margin:10px 0;
+    font-size:14px;
+}

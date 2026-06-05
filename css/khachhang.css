@@ -1,0 +1,204 @@
+.admin-layout{
+    display:flex;
+    background:#f7f0e4;
+    
+}
+/* SIDEBAR */
+.sidebar{
+    width:380px;
+    background:#7B4E2D;
+    min-height:calc(100vh - 118px);
+}
+
+.sidebar-menu{
+    list-style:none;
+    padding-top:40px;
+    font-size: 25px;
+}
+
+.sidebar-menu li a{
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    padding:18px 25px;
+    font-size: 25px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.sidebar-menu li.active a{
+    background:var(--medium-brown);
+}
+
+.sidebar-menu li a:hover{
+    background:var(--medium-brown);
+}
+/* Content */
+.customer-content{
+    flex:1;
+    padding:30px;
+    background:#f7f0e4;
+}
+
+.page-title{
+    font-size:42px;
+    color:#8b5e34;
+    margin-bottom:25px;
+}
+
+/* THỐNG KÊ */
+.stats-grid{
+    display:flex;
+    gap:100px;
+    margin-bottom:25px;
+    height: 200px;
+}
+
+.stat-card{
+    flex:1;
+    background:#fff;
+    border:1px solid #d8b48c;
+    border-radius:14px;
+    padding:20px;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.stat-card i{
+    font-size:60px;
+    color:#7B4E2D;
+
+}
+
+.stat-card p{
+    color:#7B4E2D;
+    font-size: 30px;
+   
+}
+
+.stat-card h3{
+    color:#7B4E2D;
+    margin-top:5px;
+    font-size: 30px;
+    
+}
+
+
+/* KHUNG */
+.customer-card{
+    background:#fff;
+    border:1px solid #d5b998;
+    border-radius:14px;
+    padding:20px;
+}
+
+/* TOOLBAR */
+.customer-toolbar{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-bottom:20px;
+}
+
+.oder-search,
+.filter-box{
+    width:400px;
+    height:60px;
+    font-size: 22px;
+    border:1px solid #c7ae92;
+    border-radius:10px;
+
+    padding:0 15px;
+}
+
+/* TABLE */
+.customer-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size: 22px;
+}
+
+.customer-table thead{
+    background:#c8921d;
+    color:white;
+}
+
+.customer-table th{
+    padding:15px;
+}
+
+.customer-table td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+/* STATUS */
+.status{
+    padding:6px 12px;
+    border-radius:6px;
+    font-size:22px;
+}
+
+.pending{
+    background:#f2e8d8;
+    color:#8b5e34;
+}
+
+.shipping{
+    background:#b09068;
+    color:white;
+}
+
+.done{
+    background:#c9b06d;
+    color:white;
+}
+
+/* BUTTON */
+.btn-edit,
+.btn-delete{
+    border:none;
+    border-radius:6px;
+    padding:7px 14px;
+    cursor:pointer;
+    background:#f3e6d2;
+    color:#6d4a28;
+    font-size: 22px;
+}
+
+/* PAGINATION */
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    font-size: 22px;
+}
+
+.page-size input{
+    width:50px;
+    height:30px;
+    text-align:center;
+    font-size: 22px;
+}
+
+.page-buttons{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.page-buttons button{
+    width:35px;
+    height:35px;
+    border:1px solid #c8921d;
+    background:#fff;
+    border-radius:6px;
+    cursor:pointer;
+    font-size: 22px;
+}
+

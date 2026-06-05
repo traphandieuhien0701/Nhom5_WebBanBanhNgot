@@ -1,0 +1,211 @@
+/* =========================================================
+   FILE: dang-ky-thanh-cong.css
+   MỤC ĐÍCH:
+   - CSS cho trang đăng ký thành công.
+   - Làm card lớn hơn, rõ hơn, dễ nhìn hơn.
+========================================================= */
+
+/* Toàn bộ phần main */
+.register-success-page {
+  min-height: calc(100vh - 120px);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 16px 90px;
+  color: #674831;
+}
+
+/* Khung form chính */
+.success-card {
+  width: 100%;
+  max-width: 420px;
+  min-height: 600px;
+  background-color: #fdf3e9;
+  border-radius: 10px;
+  padding: 42px 44px 52px;
+  text-align: center;
+}
+
+/* =========================
+   1. CÁC BƯỚC 1 2 3
+========================= */
+
+.step-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step.done {
+  background-color: #b79a80;
+  color: #3d200b;
+}
+
+.step.active {
+  background-color: #f0d9c2;
+  color: #3d200b;
+}
+
+/* =========================
+   2. ICON THÀNH CÔNG
+========================= */
+
+.success-icon {
+  width: 88px;
+  height: 88px;
+  background-color: #83e69d;
+  border-radius: 50%;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon i {
+  font-size: 46px;
+  color: #000000;
+}
+
+/* =========================
+   3. TIÊU ĐỀ VÀ MÔ TẢ
+========================= */
+
+.success-card h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #674831;
+}
+
+.success-desc {
+  font-size: 14px;
+  color: #674831;
+  margin-bottom: 26px;
+}
+
+/* =========================
+   4. BẢNG THÔNG TIN
+========================= */
+
+.user-info-box {
+  background-color: #fffaf5;
+  border: 1.5px solid #c8a98f;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 52px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 20px;
+  border-bottom: 1px solid #d6bda7;
+  text-align: left;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row span {
+  font-size: 14px;
+  color: #8a5f41;
+}
+
+.info-row strong {
+  font-size: 14px;
+  color: #8a5f41;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* =========================
+   5. NÚT HÀNH ĐỘNG
+========================= */
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.success-actions a {
+  min-width: 128px;
+  height: 42px;
+  border: 1.5px solid #b78f72;
+  border-radius: 8px;
+  color: #8a5f41;
+  background-color: #fffaf5;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.success-actions a:hover {
+  background-color: #8a5f41;
+  color: #ffffff;
+}
+
+/* =========================
+   6. RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .register-success-page {
+    padding: 50px 16px 70px;
+  }
+
+  .success-card {
+    max-width: 360px;
+    min-height: 560px;
+    padding: 36px 28px 44px;
+  }
+
+  .success-card h1 {
+    font-size: 22px;
+  }
+
+  .success-actions {
+    gap: 12px;
+  }
+
+  .success-actions a {
+    min-width: 120px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) {
+  .success-card {
+    max-width: 330px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .success-actions a {
+    width: 100%;
+  }
+}

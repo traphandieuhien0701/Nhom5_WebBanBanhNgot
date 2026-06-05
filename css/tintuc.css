@@ -1,0 +1,224 @@
+.tt-breadcrumb{
+    margin-top: 45px;
+}
+
+
+/* Tiêu đề chính trang */
+.page-main-title {
+  font-size: 45px;
+  color: var(--text-color);
+  margin: 35px 0;
+  font-weight: bold;
+}
+
+/* Tiêu đề chung cho từng phân đoạn */
+.news-section-title {
+  font-size: 24px;
+  color: #5C3A21;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* 1. CSS BÀI VIẾT NỔI BẬT ĐẦU TRANG */
+.news-featured-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  align-items: stretch; 
+  width: 100%;
+}
+.news-featured-img {
+  width: 65%;
+  border-top-left-radius: 19px;
+  
+}
+.news-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.news-featured-content {
+  width: 45%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.news-featured-content h2 {
+  font-size: 40px;
+  color: #5C3A21;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.news-featured-content p {
+  color: #8E7361;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.btn-view-now {
+  align-self: center;
+  border: 1px solid #5C3A21;
+  color: #5C3A21;
+  text-decoration: none;
+  padding: 10px 100px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.btn-view-now:hover {
+  background: #5C3A21;
+  color: #ffffff;
+}
+
+/* 2. CSS XU HƯỚNG BÁNH HIỆN NAY (LƯỚI 4) */
+
+.news-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.news-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.news-card-img {
+  width: 100%;
+  height: 250px;
+}
+.news-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(61, 32, 11, 0.14);
+}
+
+.news-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.news-card-body h3 {
+  font-size: 18px;
+  color: #5C3A21;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.news-card-body p {
+  font-size: 14px;
+  color: #8E7361;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.btn-card-more {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #5C3A21;
+  color: #5C3A21;
+  text-decoration: none;
+  padding: 15px 0;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: auto;
+  transition: all 0.2s;
+}
+.btn-card-more:hover {
+  background: #5C3A21;
+  color: #ffffff;
+}
+
+/* 3. CSS GỢI Ý CHỌN BÁNH */
+.suggest-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.suggest-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.suggest-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(61, 32, 11, 0.14);
+}
+.suggest-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.suggest-box span {
+  display: block;
+  font-size: 24px;
+  color: #5C3A21;
+  font-weight: bold;
+}
+
+/* 4. CSS SỰ KIỆN VÀ WORKSHOP */
+.events-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event-img {
+  width: 100%;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.event-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-event-more {
+  border: 1px solid #5C3A21;
+  color: #805435;
+  text-decoration: none;
+  margin-top: 40px ;
+  padding: 10px 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.btn-event-more:hover {
+  background: #5C3A21;
+  color: #ffffff;
+}
+
+/* RESPONSIVE TRÊN ĐIỆN THOẠI */
+@media (max-width: 992px) {
+  .news-featured-card { flex-direction: column; }
+  .news-featured-img { width: 100%; height: 250px; }
+  .news-featured-content { width: 100%; padding: 24px; }
+  .news-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .suggest-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .events-grid-2 { grid-template-columns: 1fr; }
+}
